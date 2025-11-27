@@ -4,9 +4,15 @@ const criarProduto = async (req, res) => {
     try {
         const { nome, preco } = req.body;
 
-        if (!nome || preco == null) {
-            return res.status(400).json({ erro: "Os campos 'nome' e 'preco' são obrigatórios." });
+     
+        if (!nome || nome.trim() === "") {
+            return res.status(400).json({ erro: "O nome do produto é obrigatório." });
         }
+
+        if (preco == null || preco <= 0) {
+            return res.status(400).json({ erro: "O preço deve ser maior que 0." });
+        }
+        
 
         const [resultado] = await db.query(
             "INSERT INTO produtos (nome, preco) VALUES (?, ?)",
@@ -37,12 +43,24 @@ const atualizarProduto = async (req, res) => {
         const { id } = req.params;
         const { nome, preco } = req.body;
 
+      
+        if (!nome || nome.trim() === "") {
+            return res.status(400).json({ erro: "O nome do produto é obrigatório." });
+        }
+
+        if (preco == null || preco <= 0) {
+            return res.status(400).json({ erro: "O preço deve ser maior que 0." });
+        }
+        
+
         const [existe] = await db.query("SELECT * FROM produtos WHERE id_produto = ?", [id]);
         if (existe.length === 0) {
             return res.status(404).json({ erro: "Produto não encontrado." });
         }
 
-        await db.query("UPDATE produtos SET nome = ?, preco = ? WHERE id_produto = ?", [nome, preco, id]);
+        await db.query("UPDATE produtos SET nome = ?, preco = ? WHERE id_produto = ?", 
+            [nome, preco, id]
+        );
 
         res.json({ mensagem: "Produto atualizado com sucesso!", produto: { id_produto: id, nome, preco } });
     } catch (erro) {
@@ -91,3 +109,4 @@ module.exports = {
     excluirProduto,
     totalPedidosPorProduto
 };
+
