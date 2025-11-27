@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos - Cantina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <img src="logo.png" alt="Logo Cantina" width="150" height="150" class="logo-lateral">
+
+
+<nav>
+    <a href="index.html">Produtos</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="pedidos.html">Pedidos</a>
+</nav>
+<h1>Bem Vindo á Cantina!</h1>
+<h2>Cadastro de Pedidos</h2>
+
+<form>
+    <select>
+        <option value="" disabled selected>Selecione o Aluno</option>
+        <option value="1">Letícia Corrêa</option>
+        <option value="2">Mafer Oliveira</option>
+        <option value="3">Miguel Gerbi</option>
+        <option value="4">Marina Defendi</option>   
+        <option value="5">Murilo Jordan</option>
+        <option value="6">Leandro Saltorato</option>
+    </select>
+    
+    <select>
+        <option value="" disabled selected>Selecione o Produto</option>
+        <option value="1">Coxinha</option>
+        <option value="2">Pastel de Carne</option>
+        <option value="3">Suco Natural</option>
+        <option value="4">Enroladinho</option>  
+        <option value="5">Refrigerante</option>
+
+    </select>
+    
+    <input type="number" placeholder="Quantidade" min="1" value="1" required>
+    <button type="submit">Cadastrar Pedido</button>
+</form>
+
+<h2>Pedidos Realizados</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Data</th>
+            <th>Aluno</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>27-11-2025</td>
+            <td>Murilo Jordan</td>
+            <td>Suco Natural</td>
+            <td>1</td>
+            <td>R$ 3,50</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>27-11-2025</td>
+            <td>Leandro Saltorato</td>
+            <td>Enroladinho</td>
+            <td>2</td>
+            <td>R$ 8,00</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+</body>
+</html>

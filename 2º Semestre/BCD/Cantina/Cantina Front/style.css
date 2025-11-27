@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 15px;
+}
+
+h1 {
+    color: #38d4a6;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    color: #555;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #38d4a6;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1d977c;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #1d977c;
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    background-color: #fff;
+    color: #444;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+table td, table th {
+    padding: 15px;
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    border-color: #38d4a6;
+    outline: none;
+}
+
+form button {
+    background-color: #38d4a6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #1d977c;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #38d4a6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d977c;
+}
+
+a {
+    text-decoration: none;
+    color: #38d4a6;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1d977c;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input, form select, form button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+}
