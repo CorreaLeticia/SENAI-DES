@@ -69,7 +69,6 @@ const excluirAluno = async (req, res) => {
     }
 };
 
-// Relatório: total gasto por aluno
 const totalGastoPorAluno = async (req, res) => {
     try {
         const [resultado] = await db.query(`
