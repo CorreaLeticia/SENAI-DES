@@ -1,0 +1,187 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-02-27T13:45:20.708Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_Entrega 25.02",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "Entrega 25.02"
+    },
+    {
+      "_id": "fld_Cliente",
+      "_type": "request_group",
+      "parentId": "fld_Entrega 25.02",
+      "name": "Cliente"
+    },
+    {
+      "_id": "req_Cliente_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Cliente",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/cliente/listar"
+    },
+    {
+      "_id": "req_Cliente_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Cliente",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/cliente/buscar/:id"
+    },
+    {
+      "_id": "req_Cliente_POST",
+      "_type": "request",
+      "parentId": "fld_Cliente",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/cliente/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"cpf\": \"string\",\n  \"email\": \"string\",\n  \"cnh\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Cliente_PUT",
+      "_type": "request",
+      "parentId": "fld_Cliente",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/cliente/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"cpf\": \"string\",\n  \"email\": \"string\",\n  \"cnh\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Cliente_DELETE",
+      "_type": "request",
+      "parentId": "fld_Cliente",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/cliente/excluir/:id"
+    },
+    {
+      "_id": "fld_Carro",
+      "_type": "request_group",
+      "parentId": "fld_Entrega 25.02",
+      "name": "Carro"
+    },
+    {
+      "_id": "req_Carro_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Carro",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/carro/listar"
+    },
+    {
+      "_id": "req_Carro_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Carro",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/carro/buscar/:id"
+    },
+    {
+      "_id": "req_Carro_POST",
+      "_type": "request",
+      "parentId": "fld_Carro",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/carro/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"modelo\": \"string\",\n  \"marca\": \"string\",\n  \"placa\": \"string\",\n  \"ano\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Carro_PUT",
+      "_type": "request",
+      "parentId": "fld_Carro",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/carro/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"modelo\": \"string\",\n  \"marca\": \"string\",\n  \"placa\": \"string\",\n  \"ano\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Carro_DELETE",
+      "_type": "request",
+      "parentId": "fld_Carro",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/carro/excluir/:id"
+    }
+  ]
+}
