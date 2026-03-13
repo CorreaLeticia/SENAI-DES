@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #fef550
+}
+
+h1 {
+    color: #b39f0a;
+}
+
+input, button {
+    padding: 6px;
+    margin: 8px;
+}
+
+button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 14px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

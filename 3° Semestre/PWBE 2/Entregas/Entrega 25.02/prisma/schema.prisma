@@ -25,5 +25,5 @@ model Carro {
   modelo String
   marca  String
   placa  String @unique
-  ano    Int
+  ano    String
 }

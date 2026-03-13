@@ -1,0 +1,102 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4e9ff;
+}
+
+header {
+    background: #6a0dad;
+    color: white;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.logo{
+width:70px;
+height:70px;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    background: #9b59ff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #7d3cff;
+}
+
+select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #d9b3ff;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #f7f0ff;
+    width: 320px;
+    margin: 100px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+input,
+textarea,
+select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}

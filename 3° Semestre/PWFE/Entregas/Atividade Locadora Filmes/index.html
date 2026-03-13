@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/4221/4221419.png" class="logo">
+        <h1>CineVioleta</h1>
+
+        <button onclick="abrirModal()">Novo Filme</button>
+
+        <select id="filtroGenero" onchange="filtrarGenero()">
+            <option value="todos">Todos os gêneros</option>
+            <option value="Ação">Ação</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Drama">Drama</option>
+            <option value="Terror">Terror</option>
+            <option value="Romance">Romance</option>
+        </select>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Ano</th>
+                    <th>Produtora</th>
+                    <th>Duração</th>
+                    <th>Resumo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+    </main>
+    <div id="modalFilme" class="modal">
+        <form id="formFilme" class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" id="titulo" placeholder="Título do filme" required>
+
+            <select id="genero" required>
+                <option value="">Selecione o gênero</option>
+                <option value="Ação">Ação</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Drama">Drama</option>
+                <option value="Terror">Terror</option>
+                <option value="Romance">Romance</option>
+            </select>
+
+            <input type="number" id="ano" placeholder="Ano do filme" required>
+            <input type="text" id="produtora" placeholder="Produtora" required>
+            <input type="text" id="duracao" placeholder="Duração (ex: 120 min)" required>
+            <input type="text" id="foto" placeholder="URL da foto do filme" required>
+            <textarea id="resumo" placeholder="Breve resumo do filme"></textarea>
+            <div class="modal-buttons">
+                <button type="submit">Salvar</button>
+                <button type="reset" onclick="fecharModal()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
