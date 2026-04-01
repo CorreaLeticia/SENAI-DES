@@ -7,12 +7,15 @@ const {
     listar, 
     buscar, 
     atualizar, 
-    excluir } = require("../controllers/inscricoes.controller");
+    excluir,
+    cancelar
+ } = require("../controllers/inscricoes.controller");
 
 router.post("/cadastrar", cadastrar);
 router.get("/listar", listar);
 router.get("/buscar/:id", buscar);
 router.put("/atualizar/:id", atualizar);
 router.delete("/excluir/:id", excluir);
+router.put("/cancelar/:id", cancelar);
 
 module.exports = router;
