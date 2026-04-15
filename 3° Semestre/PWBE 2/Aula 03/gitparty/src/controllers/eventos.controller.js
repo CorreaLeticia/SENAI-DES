@@ -1,6 +1,5 @@
 const prisma = require("../data/prisma");
 
-// ✅ CADASTRAR
 const cadastrar = async (req, res) => {
     try {
         const data = req.body;
@@ -20,7 +19,6 @@ const cadastrar = async (req, res) => {
     }
 };
 
-// ✅ LISTAR
 const listar = async (req, res) => {
     try {
         const lista = await prisma.eventos.findMany();
@@ -32,7 +30,6 @@ const listar = async (req, res) => {
     }
 };
 
-// ✅ BUSCAR
 const buscar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -48,7 +45,6 @@ const buscar = async (req, res) => {
     }
 };
 
-// ✅ ATUALIZAR
 const atualizar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -70,7 +66,6 @@ const atualizar = async (req, res) => {
     }
 };
 
-// ✅ EXCLUIR
 const excluir = async (req, res) => {
     try {
         const { id } = req.params;

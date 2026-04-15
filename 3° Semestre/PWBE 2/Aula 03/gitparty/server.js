@@ -21,6 +21,11 @@ const usuariosRoutes = require('./src/routes/usuarios.routes');
 app.use('/usuarios', usuariosRoutes);
 
 
+const imagensRoutes = require('./src/routes/imagens.routes');
+
+app.use('/imagens', imagensRoutes);
+
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
