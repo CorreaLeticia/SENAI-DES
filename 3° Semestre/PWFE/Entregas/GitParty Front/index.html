@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class = "titulo">
+  Git Party - Eventos 
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHV3bjFvbmIxM2FhenMwajE0dmx6ZDFya2JsYzZvMHJ2YXprcGl6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W6Lwg2xvTr6tJpuSTd/giphy.gif" width="200">
+</h1>
+
+<div class="container">
+
+  <button onclick="abrirModal()">+ Novo Evento</button>
+
+  <div id="lista"></div>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <h2>Cadastrar Evento</h2>
+
+    <input id="titulo" placeholder="Título">
+    <input id="descricao" placeholder="Descrição">
+    <input id="local" placeholder="Local">
+    <input id="data" type="datetime-local">
+    <input id="capacidade" type="number" placeholder="Capacidade">
+    <input id="foto" placeholder="URL imagem">
+
+    <button onclick="cadastrar()">Salvar</button>
+    <button onclick="fecharModal()">Cancelar</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
