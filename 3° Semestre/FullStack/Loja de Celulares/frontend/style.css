@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #cfc4cc, #cf7da5);
+    color: #bd1b9d;
+}
+
+header {
+    background: #c6318d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form {
+    background: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(222, 211, 211, 0.3);
+    text-align: center;
+}
+
+.form input {
+    width: 90%;
+    padding: 12px;
+    margin: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #ee74d6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background: #444;
+}
+
+#lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.preco {
+    color: #00c853;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit {
+    background: #ff9800;
+    color: white;
+}
+
+.edit:hover {
+    background: #e68900;
+}
+
+.delete {
+    background: #f44336;
+    color: white;
+}
+
+.delete:hover {
+    background: #d32f2f;
+}
