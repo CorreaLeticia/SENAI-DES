@@ -1,1 +1,17 @@
 C:\Users\Letícia\flutter\bin
+
+ flutter pub get  
+   flutter run
+
+CRTL + SHIFT + P
+EMPTH
+
+
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/CorreaLeticia/Flutter-Bitola.git
+git push -u origin main

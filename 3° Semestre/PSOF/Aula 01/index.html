@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas lindas receitas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Receitas</h1>
+    <button id="abrirModal">+ Nova Receita</button>
+</header>
+
+<main></main>
+
+<div id="modal" class="modal hidden">
+    <div class="form">
+        <h2>Adicionar Receita</h2>
+
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="img" placeholder="URL da imagem">
+        <textarea id="ingredientes" placeholder="Ingredientes"></textarea>
+        <textarea id="modoFazer" placeholder="Modo de fazer"></textarea>
+        <button id="salvar">Salvar</button>
+        <button id="fechar">Fechar</button>
+    </div>
+</div>
+
+<footer><h2>®by Letícia Corrêa</h2></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
