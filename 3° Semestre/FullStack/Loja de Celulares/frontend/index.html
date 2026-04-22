@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Loja de Celulares</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1> Loja de Celulares da Lê</h1>
+</header>
+
+<main>
+
+    <section class="form">
+        <h2>Cadastrar / Editar</h2>
+
+        <input type="hidden" id="id">
+
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="imagem" placeholder="URL da imagem">
+        <input type="number" id="preco" placeholder="Preço">
+        <input type="text" id="categoria" placeholder="Categoria">
+        <input type="text" id="marca" placeholder="Marca">
+
+        <button onclick="salvar()">Salvar</button>
+    </section>
+
+    <section id="lista"></section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
