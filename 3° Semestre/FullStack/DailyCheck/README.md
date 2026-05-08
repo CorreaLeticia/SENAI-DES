@@ -66,7 +66,7 @@ ou use Live Server no VS Code.
 ## 🌦️ API de clima
 
 OpenWeather API:
-https://api.openweathermap.org/data/2.5/weather
+https://home.openweathermap.org/api_keys
 
 ---
 
