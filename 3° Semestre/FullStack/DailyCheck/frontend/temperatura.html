@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Temperatura</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <h1>Daily Check</h1>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="temperatura.html">Temperatura</a></li>
+      <li><a href="tarefas.html">Tarefas</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <h2>Buscar Temperatura</h2>
+
+    <input 
+      type="text" 
+      class="campo-cidade" 
+      placeholder="Digite a cidade"
+    >
+
+    <button onclick="pesquisarClima()">
+      Buscar
+    </button>
+
+    <div class="painel-clima">
+
+      <h3 class="nome-cidade"></h3>
+
+      <img class="icone-clima">
+
+      <p class="temperatura"></p>
+
+      <p class="descricao-clima"></p>
+
+      <p class="umidade"></p>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

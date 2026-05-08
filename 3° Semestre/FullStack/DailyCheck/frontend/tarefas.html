@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Check</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <h1>Daily Check</h1>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="temperatura.html">Temperatura</a></li>
+      <li><a href="tarefas.html">Tarefas</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <h2>Criar Tarefa</h2>
+
+    <input id="titulo" placeholder="Título" />
+    <input id="descricao" placeholder="Descrição" />
+    <input id="dataInicio" type="date" />
+    <input id="dataFim" type="date" />
+    <input id="urlImagem" placeholder="Imagem (URL)" />
+
+    <button onclick="registrarTarefa()">
+      Salvar
+    </button>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
