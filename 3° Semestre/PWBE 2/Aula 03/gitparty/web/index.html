@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitParty - Gestão de Eventos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <span>GitParty</span>
+        </div>
+
+        <div class="actions">
+
+            <button class="btn-primary" onclick="abrirModalEvento()">
+                Novo Evento
+            </button>
+
+            <button class="btn-primary" onclick="abrirModalUsuario()">
+                Novo Usuário
+            </button>
+
+            <select id="filtroStatus" onchange="filtrarEventos()">
+
+                <option value="todos">
+                    Todos os status
+                </option>
+
+                <option value="ativo">
+                    Ativos
+                </option>
+
+                <option value="cancelado">
+                    Cancelados
+                </option>
+
+                <option value="encerrado">
+                    Encerrados
+                </option>
+
+            </select>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="table-section">
+
+            <h2>
+                Eventos Cadastrados
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Data</th>
+                        <th>Local</th>
+                        <th>Capacidade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaEventos"></tbody>
+
+            </table>
+
+        </section>
+
+        <section class="cards-section">
+
+            <h2>
+                Eventos Disponíveis
+            </h2>
+
+            <div class="cards-container" id="cardsEventos">
+            </div>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>
+                Inscrições
+            </h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuário</th>
+                        <th>Evento</th>
+                        <th>Status</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaInscricoes"></tbody>
+
+            </table
+        </section>
+    </main>
+
+    <div class="modal hidden" id="modalEvento">
+
+        <div class="modal-content">
+
+            <h2>
+                Novo Evento
+            </h2>
+
+            <input type="text" id="titulo" placeholder="Título do evento">
+
+            <textarea id="descricao" placeholder="Descrição do evento">
+      </textarea>
+
+            <input type="datetime-local" id="data_evento">
+
+            <input type="text" id="local" placeholder="Local do evento">
+
+            <input type="number" id="capacidade" placeholder="Capacidade máxima">
+
+            <button class="btn-primary" onclick="cadastrarEvento()">
+                Salvar Evento
+            </button>
+
+            <button class="btn-secondary" onclick="fecharModalEvento()">
+                Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="modal hidden" id="modalUsuario">
+
+        <div class="modal-content">
+
+            <h2>
+                Novo Usuário
+            </h2>
+
+            <input type="text" id="nomeUsuario" placeholder="Nome">
+
+            <input type="email" id="emailUsuario" placeholder="Email">
+
+            <input type="password" id="senhaUsuario" placeholder="Senha">
+
+            <button class="btn-primary" onclick="cadastrarUsuario()">
+                Salvar Usuário
+            </button>
+
+            <button class="btn-secondary" onclick="fecharModalUsuario()">
+                Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="modal hidden" id="modalInscricao">
+
+        <div class="modal-content">
+
+            <h2>
+                Nova Inscrição
+            </h2>
+
+            <select id="usuarioInscricao"></select>
+
+            <select id="eventoInscricao"></select>
+
+            <button class="btn-primary" onclick="realizarInscricao()">
+                Confirmar Inscrição
+            </button>
+
+            <button class="btn-secondary" onclick="fecharModalInscricao()">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <button class="btn-primary floating-btn" onclick="abrirModalInscricao()">
+        + Inscrição
+    </button>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

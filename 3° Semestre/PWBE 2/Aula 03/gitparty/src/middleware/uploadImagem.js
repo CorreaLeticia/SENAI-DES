@@ -9,7 +9,6 @@ const filtrarExtensao = (req, file, callback) => {
   }
 };
 
-// 🔥 AGORA o destino é dinâmico por evento
 const armazenamento = multer.diskStorage({
   destination: (req, file, callback) => {
     const idEvento = req.params.id;
