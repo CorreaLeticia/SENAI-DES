@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f9fc;
+
+    color: #222;
+
+    transition: 0.3s;
+}
+
+header {
+    height: 70px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: white;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.logo {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #4caf50;
+}
+
+.tema {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.tema span {
+    font-size: 14px;
+}
+
+.switch {
+    position: relative;
+
+    width: 55px;
+
+    height: 28px;
+}
+
+
+.switch input {
+    display: none;
+}
+
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: #ccc;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 22px;
+
+    height: 22px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+.switch input:checked + .slider {
+    background-color: #4caf50;
+}
+
+
+.switch input:checked + .slider::before {
+    transform: translateX(27px);
+}
+
+main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+.topo {
+    margin-bottom: 30px;
+}
+
+
+.topo h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.topo p {
+    color: #666;
+}
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+}
+
+
+.card {
+    background-color: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.card h3 {
+    font-size: 16px;
+
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+
+.card strong {
+    display: block;
+
+    font-size: 30px;
+
+    color: #4caf50;
+
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    font-size: 13px;
+
+    color: #888;
+}
+
+.lista-container {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.titulo-lista {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.titulo-lista h2 {
+    font-size: 22px;
+}
+
+.btn-adicionar {
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #4caf50;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+.btn-adicionar:hover {
+    background-color: #388e3c;
+}
+
+
+.caminhada {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+}
+
+
+.caminhada-info h3 {
+    margin-bottom: 7px;
+}
+
+
+.caminhada-info p {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-top: 4px;
+}
+
+
+.caminhada-calorias {
+    text-align: right;
+}
+
+
+.caminhada-calorias strong {
+    display: block;
+
+    color: #4caf50;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.caminhada-calorias span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.btn-excluir {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    margin-left: 20px;
+}
+
+.vazio {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+}
+
+.grafico-container {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.grafico-container h2 {
+    margin-bottom: 8px;
+}
+
+
+.grafico-container p {
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+.grafico {
+    position: relative;
+
+    width: 100%;
+
+    height: 350px;
+}
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.modal.ativo {
+    display: flex;
+}
+
+
+.modal-conteudo {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 450px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+}
+
+
+.modal-conteudo h2 {
+    margin-bottom: 25px;
+}
+
+
+.fechar {
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+form label {
+    margin-top: 8px;
+
+    font-weight: bold;
+}
+
+
+form input {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+.btn-salvar {
+    margin-top: 20px;
+
+    border: none;
+
+    background-color: #4caf50;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+body.dark {
+    background-color: #121212;
+
+    color: white;
+}
+
+
+body.dark header,
+body.dark .card,
+body.dark .lista-container,
+body.dark .grafico-container,
+body.dark .modal-conteudo {
+    background-color: #1e1e1e;
+
+    color: white;
+}
+
+
+body.dark header {
+    border-color: #333;
+}
+
+
+body.dark .topo p,
+body.dark .card h3,
+body.dark .card p,
+body.dark .caminhada-info p,
+body.dark .caminhada-calorias span,
+body.dark .grafico-container p {
+    color: #bbb;
+}
+
+
+body.dark .caminhada {
+    border-color: #444;
+}
+
+
+body.dark form input {
+    background-color: #2a2a2a;
+
+    color: white;
+
+    border-color: #555;
+}
+
+
+body.dark .slider {
+    background-color: #555;
+}
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+
+    header .tema span {
+        display: none;
+    }
+
+
+    main {
+        width: 92%;
+
+        margin: 25px auto;
+    }
+
+
+    .caminhada {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .caminhada-calorias {
+        text-align: right;
+    }
+
+
+    .grafico {
+        height: 280px;
+    }
+
+}

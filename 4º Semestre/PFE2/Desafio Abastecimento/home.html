@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abastece+ | Histórico</title>
+
+    <link rel="stylesheet" href="css/home.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+            <h1>Abastece+</h1>
+            <p>Histórico de abastecimentos</p>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="btnTema">
+            <span class="slider"></span>
+        </label>
+
+    </header>
+
+
+    <main>
+
+        <section class="indicadores">
+
+            <div class="indicador">
+
+                <span>💰</span>
+
+                <div>
+                    <p>Custo médio</p>
+                    <strong id="precoMedio">R$ 0,00/L</strong>
+                </div>
+
+            </div>
+
+
+            <div class="indicador">
+
+                <span>🚗</span>
+
+                <div>
+                    <p>Consumo médio</p>
+                    <strong id="consumoMedio">0,00 km/L</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="lista-section">
+
+            <div class="titulo-lista">
+
+                <h2>Abastecimentos</h2>
+
+                <button id="btnAdicionar" class="btn-adicionar">
+                    +
+                </button>
+
+            </div>
+
+
+            <div id="listaAbastecimentos" class="lista"></div>
+
+        </section>
+
+
+        <section class="grafico-section">
+
+            <h2>Comparativo dos abastecimentos</h2>
+
+            <div class="grafico-container">
+
+                <canvas id="grafico"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="tituloModal">
+                    Novo abastecimento
+                </h2>
+
+                <button id="fecharModal" class="fechar">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="formAbastecimento">
+
+                <label>
+                    Data
+
+                    <input
+                        type="date"
+                        id="data"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Combustível
+
+                    <select id="combustivel" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Gasolina">
+                            Gasolina
+                        </option>
+
+                        <option value="Etanol">
+                            Etanol
+                        </option>
+
+                        <option value="Diesel">
+                            Diesel
+                        </option>
+
+                        <option value="GNV">
+                            GNV
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+                    Litros
+
+                    <input
+                        type="number"
+                        id="litros"
+                        step="0.01"
+                        min="0"
+                        placeholder="Ex: 40"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Valor pago
+
+                    <input
+                        type="number"
+                        id="valorPago"
+                        step="0.01"
+                        min="0"
+                        placeholder="Ex: 240"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Quilometragem
+
+                    <input
+                        type="number"
+                        id="quilometragem"
+                        step="0.1"
+                        min="0"
+                        placeholder="Ex: 12500"
+                        required
+                    >
+                </label>
+
+
+                <button
+                    type="submit"
+                    class="btn-salvar"
+                >
+                    Salvar abastecimento
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

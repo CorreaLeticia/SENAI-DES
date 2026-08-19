@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f9fc;
+
+    color: #222;
+
+    transition: 0.3s;
+}
+
+.splash {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    padding: 30px;
+}
+
+
+.conteudo-splash {
+    text-align: center;
+
+    max-width: 500px;
+}
+
+
+.icone-caminhada {
+    font-size: 80px;
+
+    margin-bottom: 15px;
+}
+
+
+.conteudo-splash h1 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    color: #4caf50;
+}
+
+
+.conteudo-splash p {
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+
+    color: #555;
+}
+
+.btn-entrar {
+    border: none;
+
+    background-color: #4caf50;
+
+    color: white;
+
+    padding: 13px 45px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-entrar:hover {
+    background-color: #388e3c;
+}
+.tema {
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.tema span {
+    font-size: 16px;
+}
+
+.switch {
+    position: relative;
+
+    width: 55px;
+
+    height: 28px;
+}
+
+
+.switch input {
+    display: none;
+}
+
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: #ccc;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 22px;
+
+    height: 22px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+.switch input:checked + .slider {
+    background-color: #4caf50;
+}
+
+
+.switch input:checked + .slider::before {
+    transform: translateX(27px);
+}
+
+body.dark {
+    background-color: #121212;
+
+    color: white;
+}
+
+
+body.dark .conteudo-splash p {
+    color: #ccc;
+}
+
+
+body.dark .slider {
+    background-color: #555;
+}

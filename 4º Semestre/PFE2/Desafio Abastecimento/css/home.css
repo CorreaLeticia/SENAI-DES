@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f7fb;
+    color: #222;
+
+    min-height: 100vh;
+
+    transition: 0.3s;
+}
+header {
+    background: #2563eb;
+    color: white;
+
+    padding: 25px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background-color: #2563eb;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #ccc;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 3px;
+    top: 3px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background-color: #1d4ed8;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto;
+}
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.indicador {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.indicador > span {
+    font-size: 35px;
+}
+
+.indicador p {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.indicador strong {
+    font-size: 24px;
+}
+
+.titulo-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.titulo-lista h2,
+.grafico-section h2 {
+    font-size: 22px;
+}
+.btn-adicionar {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-adicionar:hover {
+    transform: scale(1.08);
+}
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.abastecimento {
+    background: white;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+
+    align-items: center;
+    gap: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    transition: 0.2s;
+}
+
+.abastecimento:hover {
+    transform: translateY(-2px);
+}
+
+.abastecimento-info h3 {
+    margin-bottom: 5px;
+}
+
+.abastecimento-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.abastecimento-valor {
+    text-align: right;
+}
+
+.abastecimento-valor strong {
+    display: block;
+    font-size: 18px;
+}
+
+.abastecimento-valor span {
+    color: #777;
+    font-size: 13px;
+}
+
+.btn-excluir {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #fee2e2;
+    color: #dc2626;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+.vazio {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #777;
+
+    background: white;
+
+    border-radius: 12px;
+}
+
+.grafico-section {
+    margin-top: 40px;
+}
+
+.grafico-container {
+    background: white;
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    height: 400px;
+}
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 10;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+
+    width: 100%;
+    max-width: 500px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.fechar {
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #777;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+.btn-salvar {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .indicador,
+body.dark .abastecimento,
+body.dark .vazio,
+body.dark .grafico-container,
+body.dark .modal-content {
+    background: #1e1e1e;
+}
+
+body.dark .indicador p,
+body.dark .abastecimento-info p,
+body.dark .abastecimento-valor span {
+    color: #aaa;
+}
+
+body.dark input,
+body.dark select {
+    background: #292929;
+    color: white;
+    border-color: #444;
+}
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .abastecimento {
+        grid-template-columns: 1fr auto;
+    }
+
+    .abastecimento-valor {
+        text-align: left;
+    }
+
+    .btn-excluir {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .grafico-container {
+        height: 300px;
+        padding: 15px;
+    }
+}
